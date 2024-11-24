@@ -78,5 +78,35 @@ public:
     void returnItem() override;
 };
 
+
+class node
+{
+    friend class LinkedList;
+
+private:
+    vheicle *item;
+    node *next;
+
+public:
+    node(vheicle *vehicle);
+};
+
+class LinkedList
+{
+private:
+    node *head;
+
+public:
+    LinkedList();
+    ~LinkedList();
+
+    void addVehicle(vheicle *vehicle);
+    bool sell(int index);
+    void rentItem(int index, int day);
+    void returnItem(int index);
+    void displayAll();
+    void testItem(int index);
+};
+
 #endif 
  
